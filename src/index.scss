@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+@import "./sass/variables.scss";
+
 *{
   margin: 0;
   padding: 0;
@@ -8,25 +11,25 @@
 
 .navbar{
   background-color: #fff !important;
-}
 
-.navbar-brand{
-  font-size: 1.9rem !important;
-  color: #565387 !important;
-}
-
-.navbar a{
-  font-size: 1.3rem;
-  text-transform: capitalize;
-}
-
-.nav-link.active{
-  font-weight: bold;
-  border-bottom: 1px solid #565387 !important;
-}
-
-.navbar a:hover{
-  color: #3498db !important;
+  .navbar-brand{
+    font-size: 1.9rem !important;
+    color: $brand-clr !important;
+  }
+  
+ & a{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+  }
+  
+  .nav-link.active{
+    font-weight: bold;
+    border-bottom: 1px solid $brand-clr !important;
+  }
+  
+  & a:hover{
+    color: #3498db !important;
+  }
 }
 
 #header{
@@ -96,6 +99,29 @@ footer{
   }
   100%{
     transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 767px) {
+  #header {
+    margin-top: 20px;
+  }
+
+  #header h1 {
+    font-size: 28px;
+  }
+
+  #header h2 {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .btn-get-started {
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+  .header-img{
+    width: 70%;
   }
 }
 
